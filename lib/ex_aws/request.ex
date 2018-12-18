@@ -90,7 +90,7 @@ defmodule ExAws.Request do
               } BODY: #{inspect(req_body)} ATTEMPT: #{attempt}"
             )
           else
-            Logger.warn("ExAws: HTTP ERROR: #{inspect(reason)}")
+            Logger.warn("ExAws: HTTP ERROR: #{inspect(reason)} ATTEMPT: #{attempt}")
           end
 
           request_and_retry(
